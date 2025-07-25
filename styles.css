@@ -848,7 +848,7 @@ section {
 }
 
 .g-cards div:nth-of-type(1),
-.g-cards div:nth-of-type(9)
+.g-cards div:nth-of-type(10)
 {
     padding-top: 50px;
 }
@@ -1386,6 +1386,7 @@ footer .copyright p {
     .hero-image-block {
         max-width: 67%;
         max-height: 650px;
+        background-position: left top, top left;
     }
 
     .v-cards {
@@ -1404,10 +1405,6 @@ footer .copyright p {
 
     .explore-container .text-block {
         margin-right: 50px;
-    }
-
-    .explore-container .image-block {
-        margin
     }
 
     .v-container .video-block {
