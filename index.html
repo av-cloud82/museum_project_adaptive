@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width">
     <title>Louvre Museum</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css">
@@ -36,6 +37,7 @@
                     <li><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
+            <img src="assets/icons/mobile-burger.svg" alt="mobilem menu icon">
         </div>
     </header>
 
@@ -68,7 +70,7 @@
         </section>
         
         <section class="visiting" id="visiting">
-            <div class="visiting-container">
+            <div class="container visiting-container">
                 <h2>
                     Virtual tour
                 </h2>
@@ -133,7 +135,7 @@
         </section>
 
         <section class="explore" id="explore">
-            <div class="explore-container">
+            <div class="container explore-container">
                 <div class="text-block">
                     <h2 class="text-hover">Picture explore</h2>
                     <hr>
@@ -156,7 +158,7 @@
         </section>
 
         <section class="video" id="video">
-            <div class="v-container">
+            <div class="container v-container">
                 <div class="text-block">
                     <h2>Video journey</h2>
                     <p>Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
@@ -174,29 +176,14 @@
                             <button id="fullscreen" class="player-btn"></button>
                         </div>
                     </div>
-                    
-                    <!-- <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/zp1BXPX8jcU?si=4OUoQyjVclV5CArT&showinfo=0&ontrols=0&autohide=1" 
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                    </iframe>
-                    <div class="player-controls">
-                        <img src="assets/icons/play-button.svg" alt="play-btn">
-                        <span class="player-scroll"></span>
-                        <img class="volume-btn" src="assets/icons/volume.svg" alt="volume-btn">
-                        <span class="volume-scroll"></span>
-                        <img class="fullscreen-btn" src="assets/icons/fullscreen-btn.svg" alt="fullscreen-btn">
-                    </div> -->
                 </div>
+
                 <div class="video-row">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=Xf484RaRYYOJ0T1Z" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/NOhDysLnTvY?si=Za4UGtcuZZZr_QBF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=JMEXTs6ISi0mCjAm" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+
                 <div class="video-dots">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="12" viewBox="0 0 200 12" fill="none">
                         <circle cx="36" cy="6" r="6" fill="#333333"/>
@@ -212,46 +199,56 @@
         </section>
 
         <section class="gallery black-bg" id="gallery">
-            <div class="v-container">
+            <div class="container v-container">
                 <h2 class="text-hover">Art Gallery</h2>
                 <div>
                     <div class="g-cards">
                         <div>
-                            <img src="assets/gallery/galery2.jpg" alt="picture 2">
-                        </div>
-                        <div>
-                            <img src="assets/gallery/galery9.jpg" alt="picture 9">
-                        </div>
-                        <div>
-                            <img src="assets/gallery/galery4.jpg" alt="picture 4">
-                        </div>
-                        <div>
-                            <img src="assets/gallery/galery6.jpg" alt="picture 6">
-                        </div>
-                        <div>
                             <img src="assets/gallery/galery1.jpg" alt="picture 1">
                         </div>
                         <div>
-                            <img src="assets/gallery/galery8.jpg" alt="picture 8">
+                            <img src="assets/gallery/galery2.jpg" alt="picture 2">
                         </div>
                         <div>
                             <img src="assets/gallery/galery3.jpg" alt="picture 3">
                         </div>
                         <div>
+                            <img src="assets/gallery/galery4.jpg" alt="picture 4">
+                        </div>
+                        <div>
                             <img src="assets/gallery/galery5.jpg" alt="picture 5">
+                        </div>
+                        <div>
+                            <img src="assets/gallery/galery6.jpg" alt="picture 6">
                         </div>
                         <div>
                             <img src="assets/gallery/galery7.jpg" alt="picture 7">
                         </div>
                         <div>
+                            <img src="assets/gallery/galery8.jpg" alt="picture 8">
+                        </div>
+                        <div>
+                            <img src="assets/gallery/galery9.jpg" alt="picture 9">
+                        </div>
+                        <div>
                             <img src="assets/gallery/galery10.jpg" alt="picture 10">
                         </div>
                         <div>
-                            <img src="assets/gallery/galery15.jpg" alt="picture 15">
+                            <img src="assets/gallery/galery11.jpg" alt="picture 11">
                         </div>
                         <div>
                             <img src="assets/gallery/galery12.jpg" alt="picture 12">
                         </div>
+                        <div>
+                            <img src="assets/gallery/galery13.jpg" alt="picture 13">
+                        </div>
+                        <div>
+                            <img src="assets/gallery/galery14.jpg" alt="picture 14">
+                        </div>
+                        <div>
+                            <img src="assets/gallery/galery15.jpg" alt="picture 15">
+                        </div>
+ 
                     </div>
                 </div>
                 <div class="shaddow"></div>
@@ -260,7 +257,7 @@
         </section>
 
         <section class="tickets" id="tickets">
-            <div class="v-container">
+            <div class="container v-container">
                 <h2>Buy tickets</h2>
                 <hr>
                 <div>
@@ -313,7 +310,7 @@
         <div class="paralax"></div>
 
         <section class="contacts" id="contacts">
-            <div class="v-container">
+            <div class="container v-container">
                 <h2>Contacts</h2>
                 <hr>
                 <div>
