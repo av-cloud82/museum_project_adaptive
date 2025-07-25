@@ -12,6 +12,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -98,6 +99,12 @@ a:visited:hover {
 }
 
 
+section,
+header, footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 /* HEADER SECTION */
 header, .welcome {
@@ -107,7 +114,8 @@ header, .welcome {
 }
 
 .header-container {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 150px;
     display: flex;
     align-items: center;
@@ -118,6 +126,8 @@ header, .welcome {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .logo svg {
@@ -150,7 +160,7 @@ nav ul {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    gap: 55px;
+    gap: clamp(25px, 2vw, 55px);
 }
 
 nav ul li {
@@ -163,7 +173,9 @@ nav ul li {
     letter-spacing: 2px;
 }
 
-
+.hamburger {
+    display: none;
+}
 
 
 /* HERO SECTION */
@@ -174,19 +186,20 @@ nav ul li {
 }
 
 .welcome-container {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 60px;
+    position: relative;
 }
 
 .hero-text-block {
-    width: 45%;
     flex-shrink: 0;
-    margin-right: -250px;
-    margin-top: 150px;
+    top: 150px;
+    left: 0;
     z-index: 10;
-    position: relative;
+    position: absolute;
 }
 
 .hero-text-block p {
@@ -237,7 +250,8 @@ nav ul li {
 }
 
 .hero-image-block {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     height: 750px;
     background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.50) 16.19%, rgba(0, 0, 0, 0.00) 30.73%), url("assets/1.jpg");
     background-size: auto, cover;
@@ -247,6 +261,8 @@ nav ul li {
     flex-direction: row;
     align-items: end;
     justify-content: right;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .hero-image-nav {
@@ -296,7 +312,8 @@ section {
 /* WELCOME SECTION */
 
 .visiting-container {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     margin: 75px 0;
@@ -401,7 +418,8 @@ section {
 }
 
 .explore-container {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -445,12 +463,14 @@ section {
 .explore-container .text-block {
     width: 40%;
     flex-grow: 1;
+    margin-right: 60px;
 }
 
 .explore-container .image-block {
+    width: 100%;
+    height: 100%;
     max-width: 720px;
     max-height: 700px;
-    margin-left: 60px;
     margin-top: 15px;
 }
 
@@ -482,7 +502,8 @@ section {
 /* VIDEO SECTION */
 
 .v-container {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     padding: 75px 0;
@@ -555,7 +576,7 @@ section {
     display: none;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: 7px;
     width: 100%;
     height: 85px    ;
     flex-wrap: wrap;
@@ -875,8 +896,9 @@ section {
 }
 
 .tickets .img-block {
-    width: 720px;
-    height: 550px;
+    width: 50%;
+    max-width: 720px;
+    max-height: 550px;
 }
 
 .tickets .form-block {
@@ -890,6 +912,7 @@ section {
 .tickets .radio-input {
     display: flex;
     flex-direction: column;
+    min-width: fit-content;
 }
 
 .tickets .form-block h4 {
@@ -1161,8 +1184,12 @@ section {
 }
 
 .contacts .map-block {
-    width: 960px;
-    height: 620px;
+    max-width: 960px;
+    max-height: 620px;
+}
+
+.contacts img {
+    width: 100%;
 }
 
 
@@ -1176,10 +1203,15 @@ footer {
 }
 
 footer .h-container {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+.footer-logo {
+    min-width: fit-content;
 }
 
 footer .footer-logo svg,
@@ -1192,7 +1224,8 @@ footer .footer-logo .logo-text {
 }
 
 footer .footer-menu {
-    width: 500px;
+    width: 100%;
+    max-width: 360px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1200,24 +1233,25 @@ footer .footer-menu {
 }
 
 footer .footer-menu ul {
+    display: block;
     color: #FFF;
     font-family: Roboto;
     font-size: 22px;
     font-weight: 200;
     line-height: normal;
     letter-spacing: 2px;
-    list-style: none;
+    list-style-type: none;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 100%;
-    gap: 0;
 }
 
 footer .footer-menu ul li {
-    width: 48%;
+    display: block;
     margin-bottom: 25px;
+}
+
+footer .footer-menu ul li a {
+    display: block;
 }
 
 footer .footer-menu ul li:nth-of-type(5),
@@ -1317,7 +1351,8 @@ footer .copyright {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     margin-bottom: 52px;
 }
 
@@ -1332,20 +1367,131 @@ footer .copyright p {
 
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1024px){
-    section > div {
-        padding-left: 20px;
-        padding-right: 20px;
+@media (min-width: 1025px) and (max-width: 1480px){
+    
+    .container h2 {
+        font-size: clamp(60px, calc(50px + 30 * (100vw - 1024px) / 456), 80px);
+        line-height: 70px;
     }
 
-    section .container {
+    .container p {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    section hr:first-of-type {
+        margin-bottom: 60px;
+    }
+
+    .hero-image-block {
+        max-width: 67%;
+        max-height: 650px;
+    }
+
+    .v-cards {
+        justify-content: space-around;
+    }
+
+    .visiting-container .card {
+        max-width: 440px;
+        min-width: 360px;
+        width: 30%;
+    }
+
+    .explore-container .image-block {
+        width: 50%;
+    }
+
+    .explore-container .text-block {
+        margin-right: 50px;
+    }
+
+    .explore-container .image-block {
+        margin
+    }
+
+    .v-container .video-block {
+        margin-top: 40px;
+    }
+
+    .v-container h2 {
+        min-width: 50%;
+    }
+
+    .video-player .video-frame {
+        height: clamp(504px, calc(504px + 226 * (100vw - 1024px) / 456), 730px);
+    }
+
+    .video #video-controls {
+        bottom: 7px;
+        height: 70px;
+        padding: 0 40px;
+        flex-wrap: nowrap;
+    }
+
+    .video .player-btn {
+        width: 23px;
+        height: 30px;
+    }
+
+    .video #playback {
+        max-width: 1044px;
+        margin: 0 30px;
+    }
+
+    .video #playback,
+    .video #volume {
+        max-height: 5px;
+    }
+
+    .video #volume-btn {
+        height: 20px;
+        width: 27px;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    .video #volume {
+        max-width: 143px;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    .video #fullscreen {
+        width: 25px;
+        height: 20px;
+    }
+
+    .video .v-container .video-row {
+        column-gap: 40px;
+    }
+
+    .video .video-dots {
+        max-height: 12px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .hamburger {
+        display: block;
+    }
+
+    section .container,
+    footer .container {
         margin: 0;
-        padding: 60px 20px;
+        padding: 60px 0;
     }
 
     section .container h2 {
         font-size: 50px;
         line-height: 75px;
+        margin-bottom: 0;
+    }
+
+    section hr:first-of-type {
+        margin-top: 20px;
+        margin-bottom: 60px;
     }
 
     .welcome-container,
@@ -1353,7 +1499,7 @@ footer .copyright p {
     .v-container,
     .visiting-container,
     .copyright,
-    .h-container {
+    footer .h-container {
         max-width: 1024px;
         width: 100%;
     }
@@ -1416,7 +1562,7 @@ footer .copyright p {
     }
 
     .hero-text-block {
-        margin-top: 50px;
+        top: 50px;
     }
 
     .hero-text-block .hero-header {
@@ -1428,8 +1574,6 @@ footer .copyright p {
     }
 
     .hero-text-block button {
-        width: 100%;
-        height: 100%;
         max-width: 300px;
         max-height: 60px;
         font-size: 20px;
@@ -1456,11 +1600,6 @@ footer .copyright p {
     .hero-image-nav .nav-points {
         height: 12px;
         margin: 0 45px;
-    }
-
-    .visiting-container hr {
-        margin-top: 20px;
-        margin-bottom: 60px;
     }
 
     .visiting-container .v-cards {
@@ -1492,11 +1631,6 @@ footer .copyright p {
         width: 100%;
     }
 
-    .explore-container hr {
-        margin-top: 20px;
-        margin-bottom: 60px;
-    }
-
     .explore-container p {
         font-size: 20px;
         margin-bottom: 0;
@@ -1507,9 +1641,12 @@ footer .copyright p {
     }
 
     .explore-container .image-block {
+        width: 100%;
         max-width: 720px;
         max-height: 700px;
-        margin: 0 auto;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -1587,6 +1724,10 @@ footer .copyright p {
         max-height: 1460px;
     }
 
+    .gallery h2 {
+        margin-bottom: 60px;
+    }
+
     .gallery .g-cards {
         height: 1450px;
         width: 100%;
@@ -1596,6 +1737,7 @@ footer .copyright p {
         column-gap: 36px;
         overflow-y: auto;
         overflow-x: hidden;
+        margin-top: 60px;
     }
 
     .g-cards div {
@@ -1604,7 +1746,7 @@ footer .copyright p {
 
 
     .g-cards div:nth-child(1),
-    .g-cards div:nth-child(12) {
+    .g-cards div:nth-child(13) {
         padding-top: 25px;
     }
 
@@ -1655,5 +1797,76 @@ footer .copyright p {
     }
 
     
+    /* TICKETS SECTION */
+
+    .tickets hr {
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .tickets .img-block {
+        width: 100%;
+        max-width: 700px;
+        max-height: 440px;
+    }
+
+    .tickets img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .tickets .radio-input {
+        display: none;
+    }
+
+    .tickets .number-input {
+        align-items: start;
+    }
+
+
+    /* CONTACTS SECTION */
+
+    .contacts .map-block {
+        height: 100%;
+        width: 100%;
+        max-width: 660px;
+        max-height: 594px;
+    }
+
+    .contacts img {
+        width: 100%;
+    }
+
+    .contacts .text-block h4 {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .contacts .text-block p {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+
+    /* FOOTER SECTION */
+    footer .footer-menu {
+        margin-left: 45px;
+        max-width: 315px;
+    }
+
+    footer .copyright {
+        padding: 0 20px;
+    }
+}
+
+
+@media (min-width: 421px) and (max-width: 768px) {
+
+    .welcome-container {
+        background-color: #710707;
+    }
+
 
 }
