@@ -298,6 +298,10 @@ nav ul li {
     margin-right: 60px;
 }
 
+.hero-image-nav .nav-points rect:hover {
+    fill: #D2B183;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -1223,6 +1227,12 @@ footer .footer-logo .logo-text {
     margin-left: 20px;
 }
 
+.footer-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 footer .footer-menu {
     width: 100%;
     max-width: 360px;
@@ -1260,7 +1270,6 @@ footer .footer-menu ul li:last-of-type {
 }
 
 footer .social {
-    margin-left: auto;
     margin-top: auto;
 }
 
@@ -1673,6 +1682,7 @@ footer .copyright p {
         height: 60px;
         padding: 0 40px;
         flex-wrap: nowrap;
+        bottom: 0;
     }
 
     .video .player-btn {
@@ -1707,6 +1717,8 @@ footer .copyright p {
     }
 
     .video .v-container .video-row iframe {
+        width: calc((100% - 60px) / 3);
+        height: auto;
         max-width: 300px;
         max-height: 170px;
     }
@@ -1851,6 +1863,14 @@ footer .copyright p {
     footer .footer-menu {
         margin-left: 45px;
         max-width: 315px;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+    }
+
+   footer  .social {
+        margin-top: 40px;
     }
 
     footer .copyright {
