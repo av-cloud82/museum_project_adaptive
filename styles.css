@@ -107,6 +107,12 @@ header, footer {
 
 
 /* HEADER SECTION */
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 header, .welcome {
     background-color: black;
     display: flex;
@@ -1403,6 +1409,7 @@ footer .copyright p {
 
     .mobile-menu.active + #menu-overlay {
         display: block;
+        top: 120px;
     }
 
     .mobile-btn {
@@ -1441,7 +1448,7 @@ footer .copyright p {
         background: #030303;
         overflow-y: auto;
         transform: translateX(-320px);
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition: transform 0.3s ease;
         opacity: 0;
         z-index: 100;
         pointer-events: none;
@@ -1795,8 +1802,18 @@ footer .copyright p {
 
 
 @media screen and (max-width: 768px) {
+    .mobile-menu {
+        max-width: 100%;
+        height: fit-content;
+        top: 110px;
+    }
+
     .header-container {
         height: 110px;
+    }
+
+    #menu-overlay {
+        top: 100px;
     }
 
     .welcome-container {
