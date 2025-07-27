@@ -515,7 +515,7 @@ section {
 }
 
 .explore-container .before-wrapper {
-    background: url("assets/before.jpg") no-repeat top left;
+    background: url("assets/before.webp") no-repeat top left;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -1051,7 +1051,7 @@ section {
 /* PARALAX */
 
 .paralax {
-    background-image: url("assets/parallax.jpg");
+    background-image: url("assets/parallax.webp");
     min-height: 400px;
     width: 100%;
     background-attachment: fixed;
@@ -1950,6 +1950,11 @@ footer .copyright p {
         display: none;
     }
 
+    .video .video-player img.img{
+        width: 80px;
+        height: 80px;
+    }
+
     .video .video-dots {
         margin-top: 20px;
     }
@@ -2172,6 +2177,11 @@ footer .copyright p {
 
     .video #video-controls {
         max-height: 50px;
+    }
+
+    .video .video-player img.img{
+        width: 50px;
+        height: 50px;
     }
 
     .video .v-container .video-row {
