@@ -48,6 +48,18 @@ function checkVideoMeta(){
     };
 };
 
+
+// function toggleMenu(){
+//     pass
+// }
+
+
+
+
+
+
+// EVENT LISTENERS
+
 document.addEventListener("DOMContentLoaded", function(){
     checkVideoMeta();
 });
@@ -78,4 +90,26 @@ clickElements.forEach(function(element){
 
 fullScreen.addEventListener("click", function(e){
     video.requestFullscreen();
+})
+
+const menuToggle = document.querySelector("#menu-toggle");
+const mobileMenu = document.querySelector("#header-nav");
+const overlay = document.querySelector("#menu-overlay");
+menuToggle.addEventListener("click", function(e){
+    e.stopPropagation();
+    menuToggle.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+})
+
+overlay.addEventListener("click", function(){
+    menuToggle.classList.remove("active");
+    mobileMenu.classList.remove("active");
+})
+
+const links = mobileMenu.querySelectorAll("a")
+links.forEach(function(link){
+    link.addEventListener("click", function(){
+        menuToggle.classList.remove("active");
+        mobileMenu.classList.remove("active");
+    })
 })
