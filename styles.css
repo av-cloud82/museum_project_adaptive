@@ -181,6 +181,11 @@ nav ul li {
 
 .mobile-btn {
     display: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 #menu-overlay {
