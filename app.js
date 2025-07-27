@@ -113,3 +113,17 @@ links.forEach(function(link){
         mobileMenu.classList.remove("active");
     })
 })
+
+const YoutubeEmbed = function(el){
+    const playButton = el.querySelector('button');
+    const iframe = el.querySelector('iframe');
+    playButton.addEventListener('click', function(){
+        iframe.src = iframe.dataset.src;
+        playButton.style.display = 'none';
+    });
+}
+
+const youtubeEmbeds = document.querySelectorAll('.youtube-embed');
+youtubeEmbeds.forEach(function(youtubeEmbed){
+    YoutubeEmbed(youtubeEmbed);
+})

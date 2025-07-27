@@ -720,23 +720,51 @@ section {
 }
 
 .video .v-container .video-row {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     margin-top: 40px;
-    justify-content: space-between;
     column-gap: 40px;
-}
-
-.video .v-container .video-row iframe {
-    width: 27%;
-    flex-grow: 1;
-    aspect-ratio: 16 / 9;
 }
 
 .video .video-dots {
     margin-top: 40px;
     display: flex;
     justify-content: center;
+}
+
+
+.youtube-embed {
+    --button-size: 6rem;
+    position: relative;
+    color: #fff;
+    background:#000;
+
+    button {
+        all: unset;
+        box-sizing: border-box;
+        cursor:pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        *{
+        pointer-events:none;
+        }
+    }
+    .play-icon {
+        height: var(--button-size);
+        width: var(--button-size);
+        position: absolute;
+        top: calc(50% - (var(--button-size) / 2));
+        left: calc(50% - (var(--button-size) / 2));
+    }
+    img,
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 
@@ -1941,12 +1969,17 @@ footer .copyright p {
         order: 2;
     }
 
+    .youtube-embed {
+    --button-size: 5rem;
+    }
+
     .video .v-container .video-row {
         margin-top: 20px;
         column-gap: 20px;
+        grid-template-columns: repeat(2, auto);
     }
 
-    .video .v-container .video-row iframe:nth-child(3) {
+    .video .v-container .video-row .youtube-embed:nth-child(3) {
         display: none;
     }
 
@@ -2026,9 +2059,6 @@ footer .copyright p {
 
 @media screen and (max-width: 678px) {
 
-    .video .v-container .video-row iframe{
-        height: auto;
-    }
     .tickets .v-container > div {
         flex-direction: column;
         align-items: center;
