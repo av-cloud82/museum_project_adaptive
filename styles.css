@@ -1098,11 +1098,14 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    column-gap: 25px;
 }
 
 .contacts .map-block {
     max-width: 960px;
     max-height: 620px;
+    width: 60%;
+    flex-grow: 1;
 }
 
 .contacts img {
@@ -1380,6 +1383,7 @@ footer .copyright p {
     .video .video-dots {
         max-height: 12px;
     }
+
 }
 
 
@@ -1675,8 +1679,6 @@ footer .copyright p {
     /* CONTACTS SECTION */
 
     .contacts .map-block {
-        height: 100%;
-        width: 100%;
         max-width: 660px;
         max-height: 594px;
     }
