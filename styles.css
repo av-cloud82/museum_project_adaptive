@@ -1148,9 +1148,10 @@ footer .footer-logo .logo-text {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    column-gap: 40px;
 }
 
-footer .footer-menu {
+/* footer .footer-menu {
     width: 100%;
     max-width: 360px;
     display: flex;
@@ -1184,6 +1185,25 @@ footer .footer-menu ul li a {
 footer .footer-menu ul li:nth-of-type(5),
 footer .footer-menu ul li:last-of-type {
     margin-bottom: 0;
+} */
+.footer-logo {
+    margin-right: 145px;
+    display: flex;
+    align-items: center;
+}
+footer .footer-menu nav {
+    width: 100%;
+}
+
+footer .footer-menu ul {
+    display: grid;
+    width: 100%;
+    max-width: 360px;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    gap: 25px 0;
 }
 
 footer .social {
@@ -1210,7 +1230,6 @@ footer .social ul .icon {
     border: 1px solid rgb(102, 102, 102);
     border-radius: 50px;
     transition: all 0.4s;
-    /* transition: box-shadow 0.4s ease; */
 }
 
 footer .social ul .icon:hover {
@@ -1705,8 +1724,11 @@ footer .copyright p {
         padding-top: 60px;
     }
 
+    .footer-logo {
+        margin-right: 45px;
+    }
+
     footer .footer-menu {
-        margin-left: 45px;
         max-width: 315px;
     }
 
@@ -1726,9 +1748,9 @@ footer .copyright p {
     .video .v-container .video-row {
         column-gap: 20px;
     }
-    
-    .footer-right {
-        margin-left: 15%;
+
+    .footer-logo {
+        margin-right: 100px;
     }
 
     footer .social {
@@ -1739,14 +1761,6 @@ footer .copyright p {
     .social ul {
         margin: 0;
         padding: 0;
-    }
-
-    footer .footer-menu ul {
-        align-content: space-between;
-    }
-
-    footer .footer-menu {
-        max-width: 340px;
     }
 
     footer hr {
@@ -1958,17 +1972,6 @@ footer .copyright p {
         font-size: 18px;
     }
 
-    .footer-right {
-        margin-left: 15%;
-        max-width: 340px;
-    }
-
-    footer .footer-menu,
-    .social ul {
-        margin: 0;
-        padding: 0;
-    }
-
     footer hr {
         margin: 40px 0;
     }
@@ -2017,6 +2020,11 @@ footer .copyright p {
         flex-direction: column;
     }
 
+    footer .footer-logo svg {
+        width: 29px;
+        height: 16px;
+    }
+
     .footer-right {
         margin-top: 40px;
         margin-left: 0;
@@ -2029,8 +2037,9 @@ footer .copyright p {
     }
 
     footer .footer-menu ul {
-        row-gap: 28px;
-        height: 70px;
+        grid-template-rows: repeat(2, auto);
+        gap: 28px 0;
+        max-width: unset;
     }
 
     footer .social {
