@@ -1548,7 +1548,6 @@ footer .copyright p {
     }
 
     .header-container {
-        padding: 0 20px;
         height: 130px;
     }   
 
@@ -1879,7 +1878,8 @@ footer .copyright p {
     .hero-image-block {
         margin: 0;
         max-width: 728px;
-        max-height: none;
+        width: 100%;
+        height: auto;
     }
 
     .hero-image-block::before {
@@ -2142,6 +2142,12 @@ footer .copyright p {
 @media screen and (max-width: 460px){
     .header-container {
         height: 90px;
+    }
+
+    .hero-image-block img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
     
     .logo svg {
