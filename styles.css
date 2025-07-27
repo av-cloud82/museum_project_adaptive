@@ -708,22 +708,18 @@ section {
     cursor: pointer;
 }
 
-
-.video .video-block iframe {
-    width: 100%;
-    height: 656px;
-}
-
 .video .v-container .video-row {
     display: flex;
     flex-direction: row;
     margin-top: 40px;
     justify-content: space-between;
+    column-gap: 40px;
 }
 
 .video .v-container .video-row iframe {
-    max-height: 254px;
-    max-width: 452px;
+    width: 27%;
+    flex-grow: 1;
+    aspect-ratio: 16 / 9;
 }
 
 .video .video-dots {
@@ -760,7 +756,7 @@ section {
 
 .g-cards {
     column-count: 3;
-    column-gap: 35px;
+    column-gap: 36px;
 }
 
 .g-cards div {
@@ -769,7 +765,7 @@ section {
 }
 
 .g-cards div:nth-of-type(1),
-.g-cards div:nth-of-type(10)
+.g-cards div:nth-of-type(9)
 {
     padding-top: 50px;
 }
@@ -1381,10 +1377,6 @@ footer .copyright p {
         height: 20px;
     }
 
-    .video .v-container .video-row {
-        column-gap: 40px;
-    }
-
     .video .video-dots {
         max-height: 12px;
     }
@@ -1577,7 +1569,6 @@ footer .copyright p {
         margin-right: auto;
     }
 
-
     .v-container .text-block p {
         display: none;
     }
@@ -1634,13 +1625,6 @@ footer .copyright p {
         height: 20px;
     }
 
-    .video .v-container .video-row iframe {
-        width: calc((100% - 60px) / 3);
-        height: auto;
-        max-width: 300px;
-        max-height: 170px;
-    }
-
     .video .video-dots {
         max-height: 12px;
     }
@@ -1656,71 +1640,7 @@ footer .copyright p {
     }
 
     .gallery .g-cards {
-        height: 1450px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        column-gap: 36px;
-        overflow-y: auto;
-        overflow-x: hidden;
         margin-top: 60px;
-    }
-
-    .g-cards div {
-        max-width: calc((100% - 72px) / 3);
-    }
-
-
-    .g-cards div:nth-child(1),
-    .g-cards div:nth-child(13) {
-        padding-top: 25px;
-    }
-
-    .g-cards div:nth-child(1) {
-        order: 1;
-    }
-    .g-cards div:nth-child(2) {
-        order: 2;
-    }
-    .g-cards div:nth-child(3) {
-        order: 10;
-    }
-    .g-cards div:nth-child(4) {
-        order: 11;
-    }
-    .g-cards div:nth-child(5) {
-        order: 4;
-    }
-    .g-cards div:nth-child(6) {
-        order: 12;
-    }
-    .g-cards div:nth-child(7) {
-        order: 5;
-    }
-    .g-cards div:nth-child(8) {
-        order: 6;
-    }
-    .g-cards div:nth-child(9) {
-        display: none;
-    }
-    .g-cards div:nth-child(10) {
-        display: none;
-    }
-    .g-cards div:nth-child(11) {
-        order: 3;
-    }
-    .g-cards div:nth-child(12) {
-        order: 9;
-    }
-    .g-cards div:nth-child(13) {
-        order: 7;
-    }
-    .g-cards div:nth-child(14) {
-        order: 8;
-    }
-    .g-cards div:nth-child(15) {
-        display: none;
     }
 
     
@@ -1801,6 +1721,10 @@ footer .copyright p {
 
 @media screen and (max-width: 978px) {
 
+    .video .v-container .video-row {
+        column-gap: 20px;
+    }
+    
     .footer-right {
         margin-left: 15%;
     }
@@ -1967,12 +1891,7 @@ footer .copyright p {
 
     .video .v-container .video-row {
         margin-top: 20px;
-        column-gap: unset;
-    }
-
-    .video .v-container .video-row iframe {
-        max-width: 354px;
-        width: calc((100% - 20px) / 2);
+        column-gap: 20px;
     }
 
     .video .v-container .video-row iframe:nth-child(3) {
@@ -1985,10 +1904,8 @@ footer .copyright p {
 
     .gallery .g-cards {
         margin-top: 40px;
-    }
-
-    .g-cards div {
-        max-width: calc((100% - 25px) / 2);
+        column-count: 2;
+        column-gap: 24px;
     }
 
     .gallery {
@@ -2163,7 +2080,13 @@ footer .copyright p {
     .hero-text-block p,
     .hero-image-nav p,
     .visiting-container .card p:first-of-type,
-    .visiting-container .card p:last-of-type {
+    .visiting-container .card p:last-of-type,
+    .tickets .form-block h4,
+    .tickets .number-input div,
+    .tickets .number-input .total,
+    .tickets .number-input button,
+    .contacts .text-block h4,
+    .contacts .text-block p {
         font-size: 16px;
     }
 
@@ -2191,5 +2114,51 @@ footer .copyright p {
         width: 25px;
         height: auto;
     }
+
+    .gallery {
+        max-height: 757px;
+    }
     
+    .g-cards div:nth-of-type(n + 7) {
+        display: none;
+    }
+
+    .video #video-controls {
+        max-height: 50px;
+    }
+
+    .video .v-container .video-row {
+        margin-top: 40px;
+    }
+
+    .video .video-dots {
+        margin-top: 40px;
+    }
+
+    .video .video-dots svg {
+        height: 8px;
+    }
+
+    .tickets img {
+        max-height: 160px;
+    }
+
+    .tickets .form-block h4 {
+        font-size: 16px;
+    }
+
+    .tickets .number-input .total {
+        margin: 40px 0;
+    }
+
+    .contacts .map-block {
+        max-height: 248px;
+        overflow: hidden;
+    }
+
+    .contacts img {
+        transform: scale(2.5);
+        object-fit: cover;
+    }
+
 }
