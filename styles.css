@@ -68,7 +68,7 @@ ol[role='list'] {
 body,
 main {
   line-height: 1.5;
-  width: 100%;
+
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -204,7 +204,8 @@ nav ul {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    gap: clamp(25px, 2vw, 55px);
+    justify-content: space-between;
+    gap: min(55px, max(calc(5vw - 20px), 20px));
 }
 
 nav ul li {
@@ -245,10 +246,10 @@ nav ul li {
 
 .welcome-container {
     width: 100%;
+    height: auto;
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 60px;
     position: relative;
 }
 
@@ -309,8 +310,8 @@ nav ul li {
 
 .hero-image-block {
     width: 100%;
+    height: auto;
     max-width: 1000px;
-    max-height: 750px;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -318,6 +319,7 @@ nav ul li {
     margin-left: auto;
     margin-right: 0;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-image-block::before {
@@ -344,6 +346,10 @@ nav ul li {
     padding: 40px 75px;
     margin-top: -60px;
     background: #030303;
+    width: 100%;
+    max-width: 605px;
+    height: auto;
+    max-height: 120px;
 }
 
 .hero-image-nav p {
@@ -377,10 +383,15 @@ nav ul li {
 section {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
 .black-bg {
     background-color: black;
+    width: 100%;
+    height: auto;
+    max-height: 2200px;
 }
 
 
@@ -390,6 +401,7 @@ section {
 .visiting-container {
     width: 100%;
     max-width: 1440px;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin: 75px 0;
@@ -767,6 +779,8 @@ section {
     grid-template-columns: repeat(3, auto);
     margin-top: 40px;
     column-gap: 40px;
+    width: 100%;
+    height: auto;
 }
 
 .video .video-dots {
@@ -814,9 +828,9 @@ section {
 
 /* GALLERY SECTION */
 
-.gallery .v-container {
+/* .gallery .v-container {
     max-height: 2200px;
-}
+} */
 
 .gallery .v-container {
     overflow-y: hidden;
@@ -1398,7 +1412,6 @@ footer .copyright p {
 
     .hero-image-block {
         max-width: 67%;
-        max-height: 650px;
         background-position: left top, top left;
     }
 
@@ -1610,7 +1623,6 @@ footer .copyright p {
 
     .hero-image-block {
         max-width: 700px;
-        max-height: 525px;
     }
 
     .hero-image-nav p {
@@ -1623,6 +1635,7 @@ footer .copyright p {
         padding-bottom: 50px;
         padding-left: 200px;
         padding-right: 75px;
+        max-width: fit-content;
     }
 
     .hero-image-nav .nav-points {
@@ -1927,7 +1940,7 @@ footer .copyright p {
     .hero-image-nav {
         padding: 40px 0;
         width: 100%;
-        margin-top: 0;
+        margin: 0 auto;
         justify-content: center;
     }
 
