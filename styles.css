@@ -1,5 +1,6 @@
 @font-face {
     font-family: 'Roboto';
+    font-display: swap;
     src: url('assets/fonts/Roboto/Roboto-ExtraLight.woff2') format('woff2'),
         url('assets/fonts/Roboto/Roboto-ExtraLight.ttf') format('truetype');
     font-weight: 200;
@@ -7,6 +8,7 @@
 }
 @font-face {
     font-family: 'Roboto';
+    font-display: swap;
     src: url('assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
         url('assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -14,6 +16,7 @@
 }
 @font-face {
     font-family: 'Roboto';
+    font-display: swap;
     src: url('assets/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
         url('assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
     font-weight: 700;
@@ -22,6 +25,7 @@
 
 @font-face {
     font-family: 'Forum';
+    font-display: swap;
     src: url('assets/fonts/Forum/Forum-Regular.woff2') format('woff2'),
             url('assets/fonts/Forum/Forum-Regular.ttf') format('truetype');
     font-weight: 100 900;
