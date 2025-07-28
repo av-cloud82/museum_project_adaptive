@@ -347,14 +347,13 @@ nav ul li {
 .hero-image-nav {
     display: flex;
     align-items: center;
+    justify-content: end;
     z-index: 10;
-    padding: 40px 75px;
+    padding: 0 75px;
     margin-top: -60px;
     background: #030303;
-    width: 100%;
-    max-width: 605px;
-    height: auto;
-    max-height: 120px;
+    width: 605px;
+    height: 120px;
 }
 
 .hero-image-nav p {
@@ -1660,11 +1659,8 @@ footer .copyright p {
     }
 
     .hero-image-nav {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 200px;
-        padding-right: 75px;
-        max-width: fit-content;
+        width: 700px;
+        height: 116px;
     }
 
     .hero-image-nav .nav-points {
@@ -1958,7 +1954,7 @@ footer .copyright p {
     }
 
     .hero-image-nav {
-        padding: 40px 0;
+        padding: 0;
         width: 100%;
         margin: 0 auto;
         justify-content: center;
