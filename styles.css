@@ -244,6 +244,7 @@ nav ul li {
 /* HERO SECTION */
 
 .welcome h1 {
+    font-size: 0.5rem;
     position: absolute;
     opacity: 0;
 }
