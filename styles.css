@@ -714,6 +714,7 @@ section {
 
 .video #video-controls input[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .video #playback {
