@@ -91,7 +91,6 @@ a:not([class]) {
 
 img,
 picture {
-  max-width: 100%;
   display: block;
 }
 
@@ -402,6 +401,7 @@ section {
     width: 100%;
     max-width: 1440px;
     height: auto;
+    min-height: 1100px;
     display: flex;
     flex-direction: column;
     margin: 75px 0;
@@ -442,8 +442,7 @@ section {
 
 .visiting-container .card-image-wrapper {
     width: 100%;
-    height: auto;
-    max-height: 285px;
+    height: 285px;
     margin-bottom: 25px;
 }
 
