@@ -101,9 +101,20 @@ menuToggle.addEventListener("click", function(e){
     mobileMenu.classList.toggle("active");
 })
 
-overlay.addEventListener("click", function(){
-    menuToggle.classList.remove("active");
-    mobileMenu.classList.remove("active");
+// overlay.addEventListener("click", function(){
+//     menuToggle.classList.remove("active");
+//     mobileMenu.classList.remove("active");
+// })
+
+document.addEventListener("click", function(e){
+
+    if(
+        mobileMenu.classList.contains("active") &&
+        !mobileMenu.contains(e.target)
+    ){
+        menuToggle.classList.remove("active");
+        mobileMenu.classList.remove("active");
+    }
 })
 
 const links = mobileMenu.querySelectorAll("a")
