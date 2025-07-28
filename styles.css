@@ -67,8 +67,8 @@ ol[role='list'] {
 /* Set core body defaults */
 body,
 main {
-  line-height: 1.5;
-
+    line-height: 1.5;
+    min-width: 370px;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -239,6 +239,10 @@ nav ul li {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 99;
+}
+
+.mobile-menu-wrapper {
+    display: none;
 }
 
 /* HERO SECTION */
@@ -1294,6 +1298,7 @@ footer .social {
     margin-top: auto;
 }
 
+.mobile-menu-wrapper .social ul,
 footer .social ul{
     display: flex;
     width: 340px;
@@ -1303,6 +1308,7 @@ footer .social ul{
     padding: 0;
 }
 
+.mobile-menu-wrapper .social ul .icon,
 footer .social ul .icon {
     display: flex;
     justify-content: center;
@@ -1314,11 +1320,13 @@ footer .social ul .icon {
     transition: all 0.4s;
 }
 
+.mobile-menu-wrapper .social ul .icon:hover,
 footer .social ul .icon:hover {
     border-color: #9D8665;
     box-shadow: 0 0 0 1px #9D8665;
 }
 
+.mobile-menu-wrapper .social ul .icon .icon-mask,
 footer .social ul .icon .icon-mask {
     width: 24px;
     height: 24px;
@@ -1327,30 +1335,37 @@ footer .social ul .icon .icon-mask {
     mask-size: contain;
 }
 
+.mobile-menu-wrapper .social ul .icon:hover .icon-mask,
 footer .social ul .icon:hover .icon-mask {
     background-color: #9D8665;
 }
 
+.mobile-menu-wrapper .social ul .icon .yt,
 footer .social ul .icon .yt {
     -webkit-mask: url("assets/icons/youtube.svg") no-repeat center;
     mask: url("assets/icons/youtube.svg") no-repeat center;
 }
 
+.mobile-menu-wrapper .social ul .icon .insta,
+.mobile-menu-wrapper ul .icon .insta,
 footer .social ul .icon .insta {
     -webkit-mask: url("assets/icons/insta.svg") no-repeat center;
     mask: url("assets/icons/insta.svg") no-repeat center;
 }
 
+.mobile-menu-wrapper .social ul .icon .fb,
 footer .social ul .icon .fb {
     -webkit-mask: url("assets/icons/fb.svg") no-repeat center;
     mask: url("assets/icons/fb.svg") no-repeat center;
 }
 
+.mobile-menu-wrapper .social ul .icon .tw,
 footer .social ul .icon .tw {
     -webkit-mask: url("assets/icons/twitter.svg") no-repeat center;
     mask: url("assets/icons/twitter.svg") no-repeat center;
 }
 
+.mobile-menu-wrapper .social ul .icon .pt,
 footer .social ul .icon .pt {
     -webkit-mask: url("assets/icons/pinterest.svg") no-repeat center;
     mask: url("assets/icons/pinterest.svg") no-repeat center;
@@ -1504,6 +1519,10 @@ footer .copyright p {
 
     /* MOBILE MENU */
 
+    .header-nav {
+        display: none;
+    }
+
     .mobile-menu.active + #menu-overlay {
         display: block;
     }
@@ -1525,13 +1544,14 @@ footer .copyright p {
         display: block;
     }
 
-    .mobile-menu.active {
+    .mobile-menu-wrapper.active {
         transform: translateX(0);
         opacity: 1;
         pointer-events: auto;
     }
 
-    .mobile-menu {
+    .mobile-menu-wrapper {
+        display: block;
         position: absolute;
         top: 130px;
         left: 0;
@@ -1578,6 +1598,12 @@ footer .copyright p {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    .mobile-menu-wrapper .mm-images,
+    .mobile-menu-wrapper .social,
+    .mobile-menu-wrapper hr {
+        display: none;
     }
 
     section .container {
@@ -1890,10 +1916,50 @@ footer .copyright p {
 
 
 @media screen and (max-width: 768px) {
-    .mobile-menu {
+    .mobile-menu-wrapper {
         max-width: 100%;
         height: fit-content;
         top: 110px;
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-bottom: 55px;
+    }
+
+    .mobile-menu-wrapper .mm-images,
+    .mobile-menu-wrapper .social,
+    .mobile-menu-wrapper hr {
+        display: block;
+    }
+
+    .mobile-menu-wrapper .mm-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .mobile-menu-wrapper .mm-images img:first-child {
+        flex: 1 1;
+        width: 100%;
+        aspect-ratio: 329 / 97;
+    }
+
+    .mobile-menu-wrapper .mm-images img:not(:first-child) {
+        flex-grow: 1;
+        width: 40%;
+        aspect-ratio: 319 / 161;
+    }
+
+    .mobile-menu-wrapper hr {
+        width: 100%;
+        height: 1px;
+        margin: 35px 0;
+    }
+
+    .mobile-menu-wrapper .social ul {
+        gap: 25px;
+        justify-content: center;
     }
 
     .header-container {
@@ -2189,12 +2255,30 @@ footer .copyright p {
     footer .copyright p:nth-child(2) {
         display: none;
     }
+
+
 }
 
 @media screen and (max-width: 460px){
 
-    .mobile-menu{
+    .mobile-menu-wrapper {
         top: 85px;
+        min-width: 370px;
+    }
+
+    .mobile-menu-wrapper .mm-images {
+        gap: 15px;
+    }
+
+    .mobile-menu-wrapper .mm-images img {
+        width: 20%!important;
+        flex: 1 1;
+        aspect-ratio: 1 / 1!important;
+        object-fit: cover;
+    }
+
+    .mobile-menu-wrapper .social ul {
+        gap: 5px;
     }
 
     .header-container {
