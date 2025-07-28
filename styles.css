@@ -91,6 +91,7 @@ a:not([class]) {
 
 img,
 picture {
+    width: 100%;
   display: block;
 }
 
@@ -389,8 +390,9 @@ section {
 .black-bg {
     background-color: black;
     width: 100%;
-    height: auto;
+    height: 2200px;
     max-height: 2200px;
+    overflow: hidden;
 }
 
 
@@ -400,8 +402,7 @@ section {
 .visiting-container {
     width: 100%;
     max-width: 1440px;
-    height: auto;
-    min-height: 1100px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 75px 0;
@@ -442,14 +443,14 @@ section {
 
 .visiting-container .card-image-wrapper {
     width: 100%;
-    height: 285px;
+    aspect-ratio: 1.542;
     margin-bottom: 25px;
 }
 
 .visiting-container .card-image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -508,7 +509,9 @@ section {
 
 .explore-container {
     width: 100%;
+    height: 100%;
     max-width: 1440px;
+    /* max-height: 715px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -566,7 +569,13 @@ section {
 .explore-container .before-after {
     position: relative;
     width: 100%;
+    height: 100%;
     overflow: hidden;
+}
+
+.before-after img {
+    width: 100%;
+    height: 100%;
 }
 
 .explore-container .before-wrapper {
@@ -592,6 +601,7 @@ section {
 
 .v-container {
     width: 100%;
+    height: 100%;
     max-width: 1440px;
     display: flex;
     flex-direction: column;
@@ -629,21 +639,25 @@ section {
 
 .video .video-block {
     margin-top: 75px;
+    width: 100%;
+    height: 100%;
+    max-height: 736px;
 }
 
 .video .video-player {
     width: 100%;
-    
+    height: 100%;
     position: relative;
 }
 
 .video .video-frame {
     width: 100%;
-    height: 730px;
+    height: 738px;
     object-fit: cover;
 }
 
 .video .video-player img {
+    width: unset;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -780,7 +794,6 @@ section {
     margin-top: 40px;
     column-gap: 40px;
     width: 100%;
-    height: auto;
 }
 
 .video .video-dots {
@@ -795,7 +808,7 @@ section {
     position: relative;
     color: #fff;
     background:#000;
-
+ 
     button {
         all: unset;
         box-sizing: border-box;
@@ -1416,7 +1429,8 @@ footer .copyright p {
     }
 
     .v-cards {
-        justify-content: space-around;
+        justify-content: space-evenly;
+        row-gap: 60px;
     }
 
     .visiting-container .card {
