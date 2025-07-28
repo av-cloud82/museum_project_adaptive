@@ -674,6 +674,7 @@ section {
 
 .video .video-player img.img {
     display: block;
+    width: unset;
 }
 
 .video #video-controls.show {
