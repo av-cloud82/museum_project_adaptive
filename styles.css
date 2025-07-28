@@ -93,6 +93,7 @@ img,
 picture {
     width: 100%;
   display: block;
+  width: 100%;
 }
 
 input, button,
@@ -835,7 +836,7 @@ section {
     }
     img,
     iframe {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 1.92;
         height: 100%;
         width: 100%;
     }
