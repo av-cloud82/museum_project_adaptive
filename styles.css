@@ -339,7 +339,7 @@ nav ul li {
 
 .hero-image-block img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1.333;
     object-fit: cover;
     object-position: top left;
 }
@@ -570,6 +570,10 @@ section {
     max-height: 700px;
     margin-top: 15px;
 }
+.explore-container .before-after img {
+    width: 100%;
+    aspect-ratio: 1.028;
+}
 
 .explore-container .before-after {
     position: relative;
@@ -595,6 +599,7 @@ section {
 }
 
 .explore-container .handler {
+    height: 100%;
     position: absolute;
     top: 0;
     left: 58%;
@@ -656,7 +661,8 @@ section {
 
 .video .video-frame {
     width: 100%;
-    height: 738px;
+    aspect-ratio: 1.945;
+    /* height: 730px; */
     object-fit: cover;
 }
 
@@ -880,7 +886,7 @@ section {
 }
 
 .g-cards div:nth-of-type(1),
-.g-cards div:nth-of-type(9)
+.g-cards div:nth-of-type(11)
 {
     padding-top: 50px;
 }
@@ -931,6 +937,11 @@ section {
     width: 50%;
     max-width: 720px;
     max-height: 550px;
+}
+
+.tickets .img-block img {
+    width: 100%;
+    aspect-ratio: 1.309;
 }
 
 .tickets .form-block {
@@ -1225,6 +1236,7 @@ section {
 
 .contacts img {
     width: 100%;
+    aspect-ratio: 283 / 183;
 }
 
 
@@ -1459,10 +1471,6 @@ footer .copyright p {
 
     .v-container h2 {
         min-width: 50%;
-    }
-
-    .video-player .video-frame {
-        height: clamp(504px, calc(504px + 226 * (100vw - 1024px) / 456), 730px);
     }
 
     .video #video-controls {
@@ -1728,18 +1736,14 @@ footer .copyright p {
         margin-top: 40px;
     }
 
-    .video-player {
+    /* .video-player {
         max-width: 984px;
         max-height: 504px;
-    }
+    } */
 
     .video-player img.img {
         max-width: 152px;
         max-height: 152px;
-    }
-
-    .video-player .video-frame {
-        height: 504px;
     }
 
     .video #video-controls {
@@ -2010,10 +2014,9 @@ footer .copyright p {
         margin-top: 20px;
     }
 
-    .video-player .video-frame {
+    /* .video-player .video-frame {
         max-height: 329px;
-        height: 100%;
-    }
+    } */
 
     .video #video-controls {
         position: relative;
