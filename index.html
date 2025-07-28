@@ -57,7 +57,7 @@
                     <h1>Louvre Museum</h1>
                     <h2 class="hero-header text-hover">Welcome <br>to the louvre</h2>
                     <p>From the castle to the museum</p>
-                    <button class="button-hover" onclick="window.location.href='https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736'">Discover the Louvre</button>
+                    <button class="button-hover" aria-label="Louvre" onclick="window.location.href='https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736'">Discover the Louvre</button>
                 </div>
                 <div class="hero-image-block">
                     <img src="assets/1.webp" alt="Hero Image" fetchpriority=high
@@ -186,18 +186,18 @@
                         <video id="v-frame" class="video-frame" preload="metadata" src="assets/video/v001.mp4" poster="assets/video/v001-cover.webp"></video>
                         <img src="assets/icons/play-sign.svg" alt="Play">
                         <div id="video-controls">
-                            <button id="play-pause" class="play player-btn"></button>
+                            <button id="play-pause" class="play player-btn" aria-label="Play button"></button>
                             <input type="range" id="playback" value="0" step="0.1">
-                            <button id="volume-btn" class="player-btn"></button>
+                            <button id="volume-btn" class="player-btn" aria-label="Volume button"></button>
                             <input type="range" id="volume" min="0" max="1" step="0.01">
-                            <button id="fullscreen" class="player-btn"></button>
+                            <button id="fullscreen" class="player-btn" aria-label="Fullscreen"></button>
                         </div>
                     </div>
                 </div>
 
                 <div class="video-row">
                     <div class="youtube-embed">
-                        <button title="play">
+                        <button title="play" aria-label="Play button">
                             <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
                                 <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-56 296V168l144 88z" fill="currentColor" />
                             </svg>
@@ -206,7 +206,7 @@
                         <iframe width="560" height="315" src="about:blank" data-src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=Xf484RaRYYOJ0T1Z" title="YouTube video player" frameborder="0" allowfullscreen allow="autoplay"></iframe>
                     </div>
                     <div class="youtube-embed">
-                        <button title="play">
+                        <button title="play" aria-label="Play button">
                             <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
                                 <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-56 296V168l144 88z" fill="currentColor" />
                             </svg>
@@ -215,7 +215,7 @@
                         <iframe width="560" height="315" src="about:blank" data-src="https://www.youtube.com/embed/NOhDysLnTvY?si=Za4UGtcuZZZr_QBF" title="YouTube video player" frameborder="0" allowfullscreen allow="autoplay"></iframe>
                     </div>
                     <div class="youtube-embed">
-                        <button title="play">
+                        <button title="play" aria-label="Play button">
                             <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
                                 <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-56 296V168l144 88z" fill="currentColor" />
                             </svg>
@@ -281,6 +281,15 @@
                         <div>
                             <img src="assets/gallery/galery12.webp" alt="picture 12">
                         </div>
+                        <div>
+                            <img src="assets/gallery/galery13.webp" alt="picture 13">
+                        </div>
+                        <div>
+                            <img src="assets/gallery/galery14.webp" alt="picture 13">
+                        </div>
+                        <div>
+                            <img src="assets/gallery/galery14.webp" alt="picture 14">
+                        </div>
                     </div>
                 </div>
                 <div class="shaddow"></div>
@@ -331,7 +340,7 @@
                             </div>
                             
                             <label class="total">Total €220</label>
-                            <button class="button-hover">Buy Now</button>
+                            <button class="button-hover" aria-label="Tickets buy button">Buy Now</button>
                         </div>
                     </div>
                 </div>
