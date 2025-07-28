@@ -228,7 +228,7 @@ nav ul li {
 
 #menu-overlay {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
@@ -2192,6 +2192,15 @@ footer .copyright p {
 }
 
 @media screen and (max-width: 460px){
+
+    .mobile-menu{
+        top: 85px;
+    }
+
+    #menu-overlay {
+        top: 85px;
+    }
+
     .header-container {
         height: 90px;
     }
