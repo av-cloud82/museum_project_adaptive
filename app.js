@@ -101,11 +101,6 @@ menuToggle.addEventListener("click", function(e){
     mobileMenu.classList.toggle("active");
 })
 
-// overlay.addEventListener("click", function(){
-//     menuToggle.classList.remove("active");
-//     mobileMenu.classList.remove("active");
-// })
-
 document.addEventListener("click", function(e){
 
     if(
