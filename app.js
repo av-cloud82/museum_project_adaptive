@@ -93,7 +93,7 @@ fullScreen.addEventListener("click", function(e){
 })
 
 const menuToggle = document.querySelector("#menu-toggle");
-const mobileMenu = document.querySelector("#header-nav");
+const mobileMenu = document.querySelector("#mobile-menu-wrapper");
 const overlay = document.querySelector("#menu-overlay");
 menuToggle.addEventListener("click", function(e){
     e.stopPropagation();
@@ -102,7 +102,6 @@ menuToggle.addEventListener("click", function(e){
 })
 
 document.addEventListener("click", function(e){
-
     if(
         mobileMenu.classList.contains("active") &&
         !mobileMenu.contains(e.target)
