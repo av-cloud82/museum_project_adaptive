@@ -17,6 +17,7 @@
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
 </head>
 
 <body>
@@ -135,13 +136,14 @@
                     <img src="assets/1.webp" alt="Hero Image">
                     <div class="hero-image-nav">
                         <p><span>01</span> | <span>05</span></p>
-                        <svg class="nav-points" xmlns="http://www.w3.org/2000/svg" width="180" height="16" viewBox="0 0 180 16" fill="none">
-                            <rect width="16" height="16" fill="#D2B183"/>
-                            <rect x="41" width="16" height="16" fill="white"/>
-                            <rect x="82" width="16" height="16" fill="white"/>
-                            <rect x="123" width="16" height="16" fill="white"/>
-                            <rect x="164" width="16" height="16" fill="white"/>
-                        </svg>
+                        <div class="slider-dot-wrapper">
+                            <i class="slider-dot"></i>
+                            <i class="slider-dot"></i>
+                            <i class="slider-dot"></i>
+                            <i class="slider-dot"></i>
+                            <i class="slider-dot"></i>
+                        </div>
+
                         <svg class="arrows" xmlns="http://www.w3.org/2000/svg" width="80" height="8" viewBox="0 0 80 8" fill="none">
                             <path d="M74.2775 1.97284e-06C76.0983 1.68661 78.0058 2.91738 80 3.69231L80 4.30769C78.0058 5.10541 76.0983 6.33618 74.2775 8L72.7601 8C73.6272 6.5641 74.4653 5.47009 75.2746 4.71795L50 4.71795L50 3.28205L75.2746 3.28205C74.4653 2.52992 73.6272 1.4359 72.7601 1.86378e-06L74.2775 1.97284e-06Z" fill="white"/>
                             <path d="M5.72254 8C3.90173 6.31339 1.99422 5.08262 0 4.30769V3.69231C1.99422 2.89459 3.90173 1.66382 5.72254 0H7.23988C6.37283 1.4359 5.53468 2.52991 4.72543 3.28205H30V4.71795H4.72543C5.53468 5.47009 6.37283 6.5641 7.23988 8H5.72254Z" fill="white"/>
@@ -165,7 +167,7 @@
                         <h3>Royal palace</h3>
                         <hr>
                         <p>360&deg; Virtual Tour</p>
-                        <p>Google Stret Panorama View</p>
+                        <p>Google Street Panorama View</p>
                     </div>
                     <div class="card">
                         <div class="card-image-wrapper">
@@ -174,7 +176,7 @@
                         <h3>Denon Wing</h3>
                         <hr>
                         <p>360&deg; Virtual Tour</p>
-                        <p>Google Stret Panorama View</p>
+                        <p>Google Street Panorama View</p>
                     </div>
                     <div class="card">
                         <div class="card-image-wrapper">
@@ -183,7 +185,7 @@
                         <h3>Colonnade Perrault</h3>
                         <hr>
                         <p>360&deg; Virtual Tour</p>
-                        <p>Google Stret Panorama View</p>
+                        <p>Google Street Panorama View</p>
                     </div>
                     <div class="card">
                         <div class="card-image-wrapper">
@@ -192,7 +194,7 @@
                         <h3>Greek hall</h3>
                         <hr>
                         <p>360&deg; Virtual Tour</p>
-                        <p>Google Stret Panorama View</p>
+                        <p>Google Street Panorama View</p>
                     </div>
                     <div class="card">
                         <div class="card-image-wrapper">
@@ -201,7 +203,7 @@
                         <h3>Mona Lisa</h3>
                         <hr>
                         <p>360&deg; Virtual Tour</p>
-                        <p>Google Stret Panorama View</p>
+                        <p>Google Street Panorama View</p>
                     </div>
                     <div class="card">
                         <div class="card-image-wrapper">
@@ -210,7 +212,7 @@
                         <h3>Night Palace</h3>
                         <hr>
                         <p>360&deg; Virtual Tour</p>
-                        <p>Google Stret Panorama View</p>
+                        <p>Google Street Panorama View</p>
                     </div>
                 </div>
             </div>
@@ -264,46 +266,22 @@
                 </div>
 
                 <div class="video-row">
-                    <div class="youtube-embed">
-                        <button title="play" aria-label="Play button">
-                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-56 296V168l144 88z" fill="currentColor" />
-                            </svg>
-                            <img width="560" height="315" loading="lazy" decoding="async" alt="Bohemian Rhapsody | Muppet Music Video | The Muppets" src="assets/video/video1-cover.webp">
-                        </button>
-                        <iframe width="560" height="315" src="about:blank" data-src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=Xf484RaRYYOJ0T1Z" title="YouTube video player" allowfullscreen allow="autoplay"></iframe>
-                    </div>
-                    <div class="youtube-embed">
-                        <button title="play" aria-label="Play button">
-                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-56 296V168l144 88z" fill="currentColor" />
-                            </svg>
-                            <img width="560" height="315" loading="lazy" decoding="async" alt="Bohemian Rhapsody | Muppet Music Video | The Muppets" src="assets/video/video2-cover.webp">
-                        </button>
-                        <iframe width="560" height="315" src="about:blank" data-src="https://www.youtube.com/embed/NOhDysLnTvY?si=Za4UGtcuZZZr_QBF" title="YouTube video player" allowfullscreen allow="autoplay"></iframe>
-                    </div>
-                    <div class="youtube-embed">
-                        <button title="play" aria-label="Play button">
-                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-56 296V168l144 88z" fill="currentColor" />
-                            </svg>
-                            <img width="560" height="315" loading="lazy" decoding="async" alt="Bohemian Rhapsody | Muppet Music Video | The Muppets" src="assets/video/video3-cover.webp">
-                        </button>
-                        <iframe width="560" height="315" src="about:blank" data-src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=JMEXTs6ISi0mCjAm" title="YouTube video player" allowfullscreen allow="autoplay"></iframe>
-                    </div>
+                    <lite-youtube class="youtube-embed" videoid="aWmJ5DgyWPI"></lite-youtube>
+                    <lite-youtube class="youtube-embed" videoid="Vi5D6FKhRmo"></lite-youtube>
+                    <lite-youtube class="youtube-embed"d videoid="NOhDysLnTvY"></lite-youtube>
 
                 </div>
 
                 <div class="video-dots">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="12" viewBox="0 0 200 12" fill="none">
-                        <circle cx="36" cy="6" r="6" fill="#333333"/>
-                        <circle cx="68" cy="6" r="6" fill="#999999"/>
-                        <circle cx="100" cy="6" r="6" fill="#999999"/>
-                        <circle cx="132" cy="6" r="6" fill="#999999"/>
-                        <circle cx="164" cy="6" r="6" fill="#999999"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.4777 0.219168C5.87773 0.564178 5.94259 1.19347 5.62256 1.62473L2.37578 6.00004L5.62256 10.3753C5.94259 10.8066 5.87773 11.4359 5.4777 11.7809C5.07766 12.1259 4.49394 12.056 4.17391 11.6247L0 6.00004L4.17391 0.375342C4.49394 -0.0559202 5.07766 -0.125842 5.4777 0.219168ZM9.65184 0.219168C10.0519 0.564178 10.1167 1.19347 9.7967 1.62473L6.54992 6.00004L9.7967 10.3753C10.1167 10.8066 10.0519 11.4359 9.65184 11.7809C9.2518 12.1259 8.66808 12.056 8.34805 11.6247L4.17414 6.00004L8.34805 0.375342C8.66808 -0.0559202 9.2518 -0.125842 9.65184 0.219168Z" fill="#999999"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M190.348 0.219168C190.748 -0.125842 191.332 -0.0559202 191.652 0.375342L195.826 6.00004L191.652 11.6247C191.332 12.056 190.748 12.1259 190.348 11.7809C189.948 11.4359 189.883 10.8066 190.203 10.3753L193.45 6.00004L190.203 1.62473C189.883 1.19347 189.948 0.564177 190.348 0.219168ZM194.522 0.219168C194.922 -0.125841 195.506 -0.0559197 195.826 0.375342L200 6.00004L195.826 11.6247C195.506 12.056 194.922 12.1259 194.522 11.7809C194.122 11.4359 194.057 10.8066 194.377 10.3753L197.624 6.00004L194.377 1.62473C194.057 1.19347 194.122 0.564178 194.522 0.219168Z" fill="#999999"/>
-                    </svg>
+                    <span>&laquo;</span>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    <span>&raquo;</span>
                 </div>
             </div>
         </section>
@@ -360,14 +338,15 @@
                             <img src="assets/gallery/galery12.webp" alt="picture 12">
                         </div>
                         <div>
+                            <img src="assets/gallery/galery11.webp" alt="picture 11">
+                        </div>
+                        <div>
                             <img src="assets/gallery/galery13.webp" alt="picture 13">
                         </div>
                         <div>
                             <img src="assets/gallery/galery14.webp" alt="picture 14">
                         </div>
-                        <div>
-                            <img src="assets/gallery/galery14.webp" alt="picture 14">
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="shaddow"></div>
@@ -417,8 +396,8 @@
                                 </span>
                             </div>
                             
-                            <label class="total">Total €220</label>
-                            <button class="button-hover" aria-label="Buy Button">Buy Now</button>
+                            <label class="total">Total €<span class="total-value">220</span></label>
+                            <button class="button-hover" aria-label="Tickets buy button">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -527,7 +506,7 @@
         <div class="copyright">
             <p>© 2025</p>
             <p>The Rolling Scopes School</p>
-            <p>av-cloud82</p>
+            <p>Username</p>
         </div>
     </footer>
 
