@@ -399,10 +399,15 @@ nav ul li {
     background-color: #FFF;
     -webkit-mask: url("assets/icons/square.svg") no-repeat center;
     mask: url("assets/icons/square.svg") no-repeat center;
+    transition: background-color 0.4s ease;
 }
 
 .hero-image-nav .slider-dot:first-of-type {
     background-color: #D2B183;
+}
+
+.hero-image-nav .slider-dot:hover {
+    background-color: #9D8665;
 }
 
 section {
@@ -537,7 +542,6 @@ section {
     width: 100%;
     height: 100%;
     max-width: 1440px;
-    /* max-height: 715px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1591,7 +1595,6 @@ footer .copyright p:nth-last-of-type(2) {
 
     .mobile-menu-wrapper.active {
         transform: translateX(0);
-        opacity: 1;
         pointer-events: auto;
     }
 
@@ -1608,9 +1611,8 @@ footer .copyright p:nth-last-of-type(2) {
         padding-left: 55px;
         background: #030303;
         overflow-y: auto;
-        transform: translateX(-320px);
-        transition: transform 0.3s ease;
-        opacity: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
         z-index: 100;
         pointer-events: none;
     }
