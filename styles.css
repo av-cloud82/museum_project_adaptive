@@ -1604,7 +1604,7 @@ footer .copyright p:nth-last-of-type(2) {
         top: 130px;
         left: 0;
         bottom: 0;
-        height: calc(100vh - 120px);
+        height: 580px;
         width: 100%;
         max-width: 300px;
         margin: 0;
