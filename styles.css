@@ -1183,6 +1183,11 @@ section {
     letter-spacing: 2px;
     transition: background 0.3s;
     cursor: pointer;
+    transition: color 0.7s ease;
+}
+
+.tickets .number-input button:hover {
+    color: #000;
 }
 
 
