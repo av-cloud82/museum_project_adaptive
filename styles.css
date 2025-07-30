@@ -953,7 +953,7 @@ section {
 
 .tickets .img-block img {
     width: 100%;
-    aspect-ratio: 1.59;
+    aspect-ratio: 1.31;
 }
 
 .tickets .form-block {
@@ -1553,6 +1553,12 @@ footer .copyright p:nth-last-of-type(2) {
 
 }
 
+@media screen and (max-width: 1300px){
+    .black-bg {
+        max-height: 1700px;
+    }
+}
+
 
 @media screen and (max-width: 1024px){
 
@@ -1870,9 +1876,9 @@ footer .copyright p:nth-last-of-type(2) {
         max-width: 700px;
     }
 
-    .tickets img {
+    .tickets .img-block img {
         width: 100%;
-        aspect-ratio: 1.309;
+        aspect-ratio: 1.59;
         object-fit: cover;
     }
 
